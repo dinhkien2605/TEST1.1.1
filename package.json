@@ -1,0 +1,20 @@
+{
+  "name": "tauri-native-ocr",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Native pre-processing (Rust) + offline OCR (Tesseract.js) packaged as an installer via Tauri.",
+  "scripts": {
+    "dev": "tauri dev",
+    "fetch-models": "node scripts/fetch-models.js",
+    "build": "tauri build",
+    "dist": "npm run fetch-models && tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@tauri-apps/api": "^2.0.0"
+  },
+  "dependencies": {
+    "tesseract.js": "^5.1.0"
+  }
+}
